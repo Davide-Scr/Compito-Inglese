@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linux or smth</title>
+    <link rel="icon" type="image/png" href="logo.png">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: url("bg.jpg") repeat-y center top;
+            background-size: 100% auto;
+            font-family: Arial, sans-serif;
+            color: #eee;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        nav {
+            width: 100%;
+            background-color: chocolate;
+            display: flex;
+            align-items: center;
+            padding: 8px 20px;
+            box-sizing: border-box;
+        }
+
+        nav img {
+            height: 40px;
+            margin-right: 20px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li a {
+            color: black;
+            font-weight: bold;
+            transition: 0.2s;
+        }
+
+        nav ul li a:hover {
+            color: darkslateblue;
+        }
+
+        .content-box {
+            width: 60%;
+            font-family: sans-serif;
+            margin: 40px auto;
+            background: #eee;
+            padding: 25px;
+            border-radius: 12px;
+            box-sizing: border-box;
+            color: black;
+        }
+
+        .grid {
+            width: 80%;
+            margin: 40px auto;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .grid-box {
+            background: #eee;
+            padding: 20px;
+            border-radius: 10px;
+            color: black;
+        }
+
+        
+        .banner {
+            width: 80%;
+            margin: 40px auto;
+            border-radius: 12px;
+            background: #eee;
+            padding: 60px 20px;
+            text-align: center;
+            box-sizing: border-box;
+            color: black;
+            font-size: 1.5rem;
+        }
+
+        footer {
+            background: darkslateblue;
+            color: #eee;
+            padding: 40px 20px;
+            display: flex;
+        }
+
+        footer h2 {
+            color: chocolate;
+            font-size: 1.6rem;
+            margin-top: 0;
+        }
+
+        @media (max-width: 600px) {
+            footer {
+                flex-direction: column;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    
+    <nav>
+        <a href="index.html">
+            <img src="logo.png" alt="Site Logo">
+        </a>
+        <ul>
+            <li><a href="page1.html">Biography</a></li>
+            <li><a href="page2.html">Page2</a></li>
+            <li><a href="page3.html">Page3</a></li>
+            <li><a href="page4.html">Page4</a></li>
+            <li><a href="page5.html">Page5</a></li>
+        </ul>
+    </nav>
+
+    <div class="content-box" style="text-align: center;">
+        <h1>Who is Linus Torvalds?</h1>
+        <p>Linus Torvalds (BIOGRAPHY) and the Birth of Linux (The Origin)</p>
+    </div>
+
+    <div class="banner">
+        Linus Torvalds (born December 28, 1969, in Helsinki
+        Finland) is a Finnish/American software engineer best 
+        known as the creator of the Linux kernel. Raised in an 
+        academic family, he discovered programming as a 
+        teenager and developed a passion for understanding 
+        how computers work. While studying computer science
+        at the University of Helsinki, Torvalds began working on 
+        a personal project to explore the Intel 386 processor and build
+        a free Unix-like environment for himself. This hobby project 
+        became Linux, first released in 1991.
+    </div>
+
+     <div class="grid">
+        <div class="grid-box">Linus Torvalds’ initial goal in 1991 was simply to create a small, free, Unix-like 
+            system he could use on his own PC. He wanted to learn the Intel 386 processor in 
+            depth and build a better environment than MINIX, which he found limiting. At the time, he saw 
+            Linux purely as a personal hobby project, something to experiment with and improve
+            for his own use, not a future global operating system.
+
+    </div>
+        <div class="grid-box">When people say Linux is “more secure” than Windows, they often refer
+            to differences in how each system handles code design and user permissions.
+            Linux is open source, meaning its code is publicly visible. Thousands of developers 
+            and security experts constantly review it, bugs and vulnerabilities are often found and fixed 
+            quickly because many eyes inspect the code. Windows is closed source, so only Microsoft can 
+            review or modify most of its internal code, this means fewer people can 
+            inspect it for vulnerabilities.
+    </div>
+
+    </div>
+
+    <footer>
+        <div class="col" style="flex: 2;">
+            <h2></h2>
+            <p>2025 @ Copyright</p>
+        </div>
+
+        <div class="col" style="flex: 1;">
+            <h2>Partecipanti</h2>
+            <p>Riccardo Aldo Gianotti "Aldo"</p>
+            <p>Thomas Varsallona "Ninja del Perù"</p>
+            <p>Cristian Daniel Hostina "Ruba-rame"</p>
+            <p>Nicholas Graziano "La patatina"</p>
+        </div>
+    </footer>
+
+</body>
+</html>
