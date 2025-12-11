@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linux or smth</title>
+    <link rel="icon" type="image/png" href="logo.png">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: url("bg.jpg") repeat-y center top;
+            background-size: 100% auto;
+            font-family: Arial, sans-serif;
+            color: #eee;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        nav {
+            width: 100%;
+            background-color: chocolate;
+            display: flex;
+            align-items: center;
+            padding: 8px 20px;
+            box-sizing: border-box;
+        }
+
+        nav img {
+            height: 40px;
+            margin-right: 20px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li a {
+            color: black;
+            font-weight: bold;
+            transition: 0.2s;
+        }
+
+        nav ul li a:hover {
+            color: darkslateblue;
+        }
+
+        .content-box {
+            width: 60%;
+            margin: 40px auto;
+            background: #eee;
+            padding: 25px;
+            border-radius: 12px;
+            box-sizing: border-box;
+            color: black;
+        }
+
+        .grid {
+            width: 80%;
+            margin: 40px auto;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .grid-box {
+            background: #eee;
+            padding: 20px;
+            border-radius: 10px;
+            color: black;
+        }
+
+        .banner {
+            width: 75%;
+            margin: auto;
+            border-radius: 12px;
+            background: #eee;
+            padding: 60px 20px;
+            text-align: center;
+            box-sizing: border-box;
+            color: black;
+            font-size: 1.5rem;
+        }
+
+        footer {
+            background: darkslateblue;
+            color: #eee;
+            padding: 40px 20px;
+            display: flex;
+        }
+
+        footer h2 {
+            color: chocolate;
+            font-size: 1.6rem;
+            margin-top: 0;
+        }
+
+        @media (max-width: 600px) {
+            footer {
+                flex-direction: column;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">
+            <img src="logo.png" alt="Site Logo">
+        </a>
+        <ul>
+            <li><a href="page1.html">Biography</a></li>
+            <li><a href="page2.html">The ideology</a></li>
+            <li><a href="page3.html">Comparison</a></li>
+            <li><a href="page4.html">Page4</a></li>
+            <li><a href="page5.html">Uses</a></li>
+        </ul>
+    </nav>
+
+    <div class="content-box">
+        <h1>Linux VS Proprietary Systems</h1>
+        <p>
+            Linux works differently than Windows and macOS, especially in terms of security, customization, and the control the user has over the system. 
+            This page discusses its pros and cons with an explanation of why Linux is common in professional circles.
+        </p>
+    </div>
+
+    <div class="banner">
+        <b>Comparison: strengths, weaknesses and real-world uses of Linux</b>
+    </div>
+
+    <div class="grid">
+        <div class="grid-box">
+            <h3>Advantages of Linux</h3>
+            <p><strong>1. Security:</strong><br>Linux doesn't give administrator permissions by default, which makes it harder for viruses or malware to cause damage. 
+                Since the code is open, the community can spot and fix problems quickly.</p>
+            <p><strong>2. Cost:</strong><br>Linux is completely free. 
+                You don’t need to buy a license and you can install it on any computer without restrictions.</p>
+            <p><strong>3. Customization:</strong><br>You can choose from many different distributions and you’re able to customize almost every part of the system.</p>
+        </div>
+
+        <div class="grid-box">
+            <h3>Disadvantages of Linux</h3>
+            <p><strong>1. Software compatibility:</strong><br>Some programs, especially Windows only games or certain professional applications, don’t have a Linux version.</p>
+            <p><strong>2. Learning curve:</strong><br>People who have never used Linux may find it a bit confusing at first, especially when they need to use the terminal.</p>
+            <p><strong>3. Support:</strong><br>There isn’t a single official support service. 
+                Most solutions come from community forums or online guides.</p>
+        </div>
+
+        <div class="grid-box">
+            <h3>Why is Linux more secure?</h3>
+            <p>
+                Linux keeps user permissions separate and doesn’t give administrator rights unless the user explicitly requests them. 
+                This greatly reduces the chances of harmful software changing system files.  
+                Since Linux is open-source, its code is publicly visible, meaning issues are usually found and fixed much faster than in closed systems.
+            </p>
+        </div>
+
+        <div class="grid-box">
+            <h3>Why is it used in servers and supercomputers?</h3>
+            <p>
+                Linux is reliable, stable and built to run for long periods without interruptions, sometimes even for years.  
+                It gives system administrators full control and allows deep optimizations, which are important for servers, supercomputers and software development.  
+                The open source community constantly improves it, which makes Linux a solid choice for professional use.
+            </p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="col" style="flex: 2;">
+            <h2>Summary</h2>
+            <p>Linux is powerful, reliable and flexible. 
+                It takes a bit of time to get used to, but it offers many advantages over proprietary systems.</p>
+            <p><em>Presented by: Mirabelli - Provaroni - Dragone - Nwankwo</em></p>
+        </div>
+
+        <div class="col" style="flex: 1;">
+            <h2>Key Points</h2>
+            <p>-Linux is safer thanks to its permission system.</p>
+            <p>-It’s free and highly customizable.</p>
+            <p>-It’s widely used in servers and supercomputers.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
