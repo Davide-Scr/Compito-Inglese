@@ -1,89 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF="8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Understanding Linux Distributions</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>Understanding Linux Distros</title>
+    <link rel="icon" type="image/png" href="logo.png">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            /* Assicurati di avere un'immagine chiamata bg.jpg nella stessa cartella */
+            background: url("bg.jpg") repeat-y center top;
+            background-size: 100% auto;
+            font-family: Arial, sans-serif;
+            color: #eee;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        nav {
+            width: 100%;
+            background-color: chocolate;
+            display: flex;
+            align-items: center;
+            padding: 8px 20px;
+            box-sizing: border-box;
+        }
+
+        nav img {
+            height: 40px;
+            margin-right: 20px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li a {
+            color: black;
+            font-weight: bold;
+            transition: 0.2s;
+        }
+
+        nav ul li a:hover {
+            color: darkslateblue;
+        }
+
+        .content-box {
+            width: 60%;
+            margin: 40px auto;
+            background: #eee;
+            padding: 25px;
+            border-radius: 12px;
+            box-sizing: border-box;
+            color: black;
+        }
+
+        .grid {
+            width: 80%;
+            margin: 40px auto;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .grid-box {
+            background: #eee;
+            padding: 20px;
+            border-radius: 10px;
+            color: black;
+        }
+
+        .banner {
+            width: 75%;
+            margin: auto;
+            border-radius: 12px;
+            background: #eee;
+            padding: 60px 20px;
+            text-align: center;
+            box-sizing: border-box;
+            color: black;
+            font-size: 1.5rem;
+        }
+
+        footer {
+            background: darkslateblue;
+            color: #eee;
+            padding: 40px 20px;
+            display: flex;
+        }
+
+        footer h2 {
+            color: chocolate;
+            font-size: 1.6rem;
+            margin-top: 0;
+        }
+
+        @media (max-width: 600px) {
+            footer {
+                flex-direction: column;
+            }
+            .grid {
+                grid-template-columns: 1fr; /* Fa diventare la griglia a una colonna su schermi piccoli */
+            }
+            .content-box {
+                width: 90%;
+            }
+        }
+
+    </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>Understanding Linux Distributions</h1>
-            <p>Explore the diverse world of Linux operating systems.</p>
+
+    <nav>
+        <a href="index.html">
+            <img src="logo.png" alt="Site Logo">
+        </a>
+        <ul>
+            <li><a href="page1.html">Distros</a></li>
+            <li><a href="page2.html">History</a></li>
+            <li><a href="page3.html">Comparison</a></li>
+            <li><a href="page4.html">Gallery</a></li>
+            <li><a href="page5.html">Download</a></li>
+        </ul>
+    </nav>
+
+    <div class="content-box">
+        <h1>What is a Linux "Distribution"?</h1>
+        <p>
+            Technically, <strong>Linux</strong> refers only to the "kernel," the core component that manages hardware. On its own, it is unusable for a typical user.
+        </p>
+        <p>
+            A <strong>Distribution (Distro)</strong> is the complete car: it packages the kernel with a desktop environment, system utilities, and a package manager. It turns the raw code into a usable operating system.
+        </p>
+    </div>
+
+    <div class="banner">
+        <b>Famous Distributions and Their Purposes</b>
+    </div>
+
+    <div class="grid">
+        <div class="grid-box">
+            <h3>1. Debian</h3>
+            <p><strong>Purpose:</strong> The universal and free operating system. Focuses on stability.</p>
+            <p><strong>Characteristics:</strong> It is the "mother" of many other distros (including Ubuntu). The software is not the newest, but it is extremely stable and widely used on servers.</p>
         </div>
-    </header>
 
-    <main class="container">
-        <section id="what-is-a-distro">
-            <h2>What is a Linux "Distribution" (Distro)?</h2>
-            <p>Technically, <strong>Linux</strong> refers only to the "kernel," the core component that manages the computer's hardware (memory, CPU, devices). On its own, the kernel is unusable for a typical user.</p>
-            <p>A <strong>Linux Distribution (Distro)</strong> is a complete operating system that packages the Linux kernel together with many other essential components to make it usable. These include:</p>
-            <ul>
-                <li><strong>System Utilities</strong> (often from the GNU project).</li>
-                <li><strong>A Desktop Environment</strong> (the graphical interface with windows and menus).</li>
-                <li><strong>A Package Manager</strong> (a system for easily installing, updating, and removing software).</li>
-                <li><strong>Pre-installed Applications</strong> (browser, text editor, media player).</li>
-            </ul>
-            <p>In short: if the Linux kernel is the engine, the "distro" is the entire car (engine, chassis, wheels, interior) ready to be driven.</p>
-        </section>
+        <div class="grid-box">
+            <h3>2. Ubuntu</h3>
+            <p><strong>Purpose:</strong> "Linux for human beings." Brings the power of Debian to the average user.</p>
+            <p><strong>Characteristics:</strong> The most famous distro. Backed by Canonical, it has a huge community and is excellent for both desktop and cloud use.</p>
+        </div>
 
-        <section id="famous-distros">
-            <h2>Famous Distributions and Their Purposes</h2>
+        <div class="grid-box">
+            <h3>3. Fedora</h3>
+            <p><strong>Purpose:</strong> Innovation. It is the testing ground for new technologies for Red Hat Enterprise.</p>
+            <p><strong>Characteristics:</strong> Always offers the latest kernel and software versions. Ideal for developers and enthusiasts who want the future of Linux today.</p>
+        </div>
 
-            <div class="distro-card">
-                <h3>1. Debian</h3>
-                <h4>Purpose:</h4>
-                <p>Created to be the universal and free operating system. It focuses on maximum stability and adherence to free software principles.</p>
-                <h4>Characteristics:</h4>
-                <ul>
-                    <li>It is the "mother" of many other distros (including Ubuntu).</li>
-                    <li>Its software is not always the very latest version available, but it is thoroughly tested to ensure system stability.</li>
-                    <li>Widely used on servers.</li>
-                </ul>
-            </div>
-
-            <div class="distro-card">
-                <h3>2. Ubuntu</h3>
-                <h4>Purpose:</h4>
-                <p>Created to make Linux accessible to humans ("Linux for human beings"). The goal is to bring the power of Debian into an easy-to-install and easy-to-use format for the average user.</p>
-                <h4>Characteristics:</h4>
-                <ul>
-                    <li>Probably the most famous distro in the world.</li>
-                    <li>Has commercial backing (the Canonical company) and a huge community.</li>
-                    <li>Excellent for both desktop and cloud environments.</li>
-                </ul>
-            </div>
-
-            <div class="distro-card">
-                <h3>3. Fedora</h3>
-                <h4>Purpose:</h4>
-                <p>To be at the forefront of innovation. It serves as a testing ground for new technologies that will eventually make their way into *Red Hat Enterprise Linux* (a widely used commercial enterprise version).</p>
-                <h4>Characteristics:</h4>
-                <ul>
-                    <li>Always offers the latest versions of software and the kernel.</li>
-                    <li>Ideal for developers and enthusiasts who want to see the future of Linux ahead of others.</li>
-                </ul>
-            </div>
-        </section>
-
-        <section id="recommendation">
-            <h2>Recommendation for Beginners</h2>
-            <p>If I had to recommend a distribution to an absolute beginner (especially someone coming from Windows), I would choose <strong>Linux Mint</strong>.</p>
-            <h4>Why Linux Mint?</h4>
-            <ul>
-                <li><strong>Familiar Interface:</strong> Linux Mint often uses a desktop environment (like "Cinnamon") that closely resembles Windows 7 or 10. It has a bottom taskbar, a "Start" menu on the left, and system icons where you'd expect them. There's no need to relearn how to use the computer.</li>
-                <li><strong>All-Inclusive:</strong> Unlike some more purist distros, Mint natively includes multimedia codecs needed for watching movies or listening to music, and proprietary drivers (like those for Wi-Fi or video cards) right from installation. It works "out of the box."</li>
-                <li><strong>Stability:</strong> Being based on Ubuntu (which in turn is based on Debian), it inherits a solid foundation and access to a massive amount of software and online guides.</li>
-            </ul>
-        </section>
-    </main>
+        <div class="grid-box">
+            <h3>Recommendation: Linux Mint</h3>
+            <p>
+                <strong>Why for beginners?</strong> It has a familiar interface (similar to Windows 7/10) with a Start menu and taskbar.
+                It comes with all media codecs and drivers pre-installed, so it works "out of the box" without needing complex setup.
+            </p>
+        </div>
+    </div>
 
     <footer>
-        <div class="container">
-            <p>&copy; Fatto da Mocro Poli, Spidi_negroNico e baby Iaco 17.</p>
+        <div class="col" style="flex: 2;">
+            <h2>Summary</h2>
+            <p>Linux is not a single system but a family of distributions. From the stability of Debian to the innovation of Fedora, there is a version for everyone.</p>
+            <p><em>Presented by: Mirabelli - Provaroni - Dragone - Nwankwo</em></p>
+        </div>
+
+        <div class="col" style="flex: 1;">
+            <h2>Key Takeaways</h2>
+            <p>- <strong>Distro:</strong> Kernel + Software + Desktop.</p>
+            <p>- <strong>Ubuntu:</strong> Best for general use.</p>
+            <p>- <strong>Fedora:</strong> Best for developers.</p>
+            <p>- <strong>Mint:</strong> Best for beginners.</p>
         </div>
     </footer>
+
 </body>
 </html>
